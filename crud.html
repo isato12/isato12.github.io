@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Paises del mundo</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Paises del Mundo</h1>
+  </header>
+<main class="contenedor">
+  <section class="agregar">
+<form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
+  <input type="text" id="add-name" placeholder="Nuevo Pais">
+  <input type="submit" value="Agregar">
+</form>
+</section >
+<section class="agregar" id="spoiler" role="aria-hidden">
+  <form action="javascript:void(0);" method="POST" id="saveEdit">
+    <input type="text" id="edit-name">
+    <input type="submit" value="Editar" /> <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+  </form>
+</section>
+
+<p class="counter" id="counter"></p>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+  </tr>
+    <tbody id="paises">
+    </tbody>
+</table>
+</main>
+<script src="main.js">
+</script>
+</body>
+</html>
